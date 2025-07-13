@@ -31,7 +31,7 @@ function s.initial_effect(c)
 	e3:SetType(EFFECT_TYPE_FIELD+EFFECT_TYPE_TRIGGER_O)
 	e3:SetRange(LOCATION_MZONE)
 	e3:SetCode(EVENT_ATTACK_ANNOUNCE)
-	e3:SetCost(aux.dxmcostgen(2,2,nil))
+	e3:SetCost(Cost.DetachFromSelf(2,2,nil))
 	e3:SetOperation(s.negop)
 	c:RegisterEffect(e3,false,REGISTER_FLAG_DETACH_XMAT)
 end

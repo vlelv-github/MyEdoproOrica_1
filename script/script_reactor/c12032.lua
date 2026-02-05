@@ -59,7 +59,7 @@ function s.activate(e,tp,eg,ep,ev,re,r,rp)
 				if #g1>=3 and Duel.SendtoDeck(g1,nil,SEQ_DECKSHUFFLE,REASON_EFFECT)~=0 then
 					local tgg = Duel.SelectMatchingCard(tp,s.airfilter,tp,LOCATION_HAND+LOCATION_DECK+LOCATION_GRAVE+LOCATION_REMOVED,0,1,1,nil,e,tp)
 					if #tgg > 0 then
-						Duel.SpecialSummon(tgg,0,tp,tp,true,false,POS_FACEUP) 
+						Duel.SpecialSummon(tgg,0,tp,tp,true,true,POS_FACEUP) 
 					end
 				end
 		end

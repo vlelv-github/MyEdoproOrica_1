@@ -39,7 +39,7 @@ function s.secon(e,tp,eg,ep,ev,re,r,rp)
 	if not re then return end
 	local rc=re:GetHandler()
 	return (re:IsActiveType(TYPE_MONSTER) or re:IsActiveType(TYPE_SPELL) or re:IsActiveType(TYPE_TRAP)) 
-		and rc:IsControler(tp) and rc:IsSetCard(0xd2) and rc:IsFaceup()
+		and rc:IsControler(tp) and rc:IsSetCard(0xd2) and rc:IsFaceup() and rc:IsReason(REASON_COST)
 end
 function s.filter(c)
 	return c:IsSetCard(0xd2) and c:IsMonster() and c:IsAbleToHand()
